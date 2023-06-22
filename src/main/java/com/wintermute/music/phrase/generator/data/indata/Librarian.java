@@ -33,7 +33,7 @@ import java.util.zip.ZipInputStream;
  */
 public class Librarian {
 
-    private static HashMap<String, ZipEntry> zipEntryMap = new HashMap<>();
+    private static final HashMap<String, ZipEntry> zipEntryMap = new HashMap<>();
     private static HashMap<Integer, String> pagesEntryMap = new HashMap<>();
     private ZipFile classZipFile = null;
     private static File currentEpub = null;

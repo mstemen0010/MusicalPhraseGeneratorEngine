@@ -99,7 +99,7 @@ public class ParaStack {
                     boolean add = this.wordSet.add(s);
                     this.wordOccurMatrix.addWordToMatrix(s);
                     if (this.wordsByCount.containsKey(s)) {
-                        int c = wordsByCount.get(s).intValue() + 1;
+                        int c = wordsByCount.get(s) + 1;
                         wordsByCount.put(s, c);
                         if (c != targetValue) {
                             continue;
@@ -114,7 +114,7 @@ public class ParaStack {
         }
     }
     public boolean isCaptalized( String wordToTest ) {
-        if(wordToTest.length() <= 1)
+        if(wordToTest.length() <= 2)
             return false;
         String upperTest = wordToTest.substring(0,1);
         String upperMask = upperTest.toUpperCase();
